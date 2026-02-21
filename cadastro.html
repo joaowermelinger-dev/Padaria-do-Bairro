@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="./css/pedidos.css">
+</head>
+
+<body>
+    <header class="container_inicio">
+        <nav class=" navegacao_links">
+            <a class="nav-menu" href="./index.html">Home</a>
+            <a class="nav-menu" href="./pedidos.html">Pedidos</a>
+            <a class="nav-menu" href="./feedback.html">Feedback</a>
+            <a class="nav-menu" href="./contato.html">Contato</a>
+        </nav>
+    </header>
+    <main class="formulario">
+
+        <!-- Sessão 1 | DADOS PESSOAIS -->
+
+        <h2>Dados Pessoais</h2>
+        <form class="formulario__form" action="">
+
+            <div class="campo">
+                <label for="inNome">Nome</label>
+                <input type="text" id="inNome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="inEmail">Email</label>
+                <input type="email" id="inEmail" placeholder="Digite seu melhor email!" required>
+            </div>
+
+            <div class="campo">
+                <label for="inTel">Telefone</label>
+                <input type="text" id="inTel" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" placeholder="(99)99999-9999"
+                    required>
+            </div>
+
+            <div class="campo">
+                <label for="inDate">Data de Nascimento</label>
+                <input type="date" id="inDate" required>
+            </div>
+
+            <h2>Endereço</h2>
+
+            <div class="endereco-grid">
+                <div class="campo">
+                    <label for="inRua">Rua</label>
+                    <input type="text" id="inRua" placeholder="Digite seu endereço" required>
+                </div>
+
+                <div class="campo">
+                    <label for="inNumber">Nº</label>
+                    <input type="number" id="inNumber" required>
+                </div>
+            </div>
+
+            <div class="bairro-cep">
+                <div class="campo">
+                    <label for="inBairro">Bairro</label>
+                    <input type="text" id="inBairro" placeholder="Qual nome do seu bairro?" required>
+                </div>
+
+                <div class="campo">
+                    <label for="inCep">CEP</label>
+                    <input type="text" id="inCep" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}" required>
+                </div>
+            </div>
+
+            <h2>Preferências</h2>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox"> 🥖 Pães artesanais</label>
+                <label><input type="checkbox"> 🍰 Doces e bolos</label>
+                <label><input type="checkbox"> 🥐 Salgados</label>
+                <label><input type="checkbox"> 🥗 Produtos diet/light</label>
+                <label><input type="checkbox"> 🌾 Produtos integrais</label>
+            </div>
+
+            <h2>Termos</h2>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox" required> Aceita receber promoções por email</label>
+                <label><input type="checkbox" required> Aceita os termos de uso</label>
+            </div>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+        <br>
+
+
+
+    </main>
+
+</body>
+
+</html>

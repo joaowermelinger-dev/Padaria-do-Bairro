@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="./css/pedidos.css">
+</head>
+
+<body>
+    <header class="container_inicio">
+        <nav class="navegacao_links">
+            <a class="nav-menu" href="./index.html">Home</a>
+            <a class="nav-menu" href="./pedidos.html">Pedidos</a>
+            <a class="nav-menu" href="./cadastro.html">Cadastro</a>
+            <a class="nav-menu" href="./contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <h1>Envie seu Feedback</h1>
+
+    <main class="formulario">
+        <form class="formulario__form" action="">
+
+            <h2>Dados</h2>
+
+            <div class="campo">
+                <label for="inNome">Nome</label>
+                <input type="text" id="inNome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="inEmail">Email</label>
+                <input type="email" id="inEmail" placeholder="Digite seu melhor email!" required>
+            </div>
+
+            <div class="campo">
+                <label for="inProdutoServico">Produto/Serviço</label>
+                <select id="inProdutoServico">
+                    <option value="">Escolha uma opção</option>
+                    <option>🥖 Pães tradicionais</option>
+                    <option>🍰 Doces e bolos</option>
+                    <option>🥐 Salgados</option>
+                    <option>👥 Atendimento</option>
+                    <option>🏠 Ambiente</option>
+                </select>
+            </div>
+
+            <h2>Avaliação Geral</h2>
+
+            <div class="radio-group">
+                <label><input type="radio" name="avaliacao"> 🌟 Excelente</label>
+                <label><input type="radio" name="avaliacao"> 👍 Bom</label>
+                <label><input type="radio" name="avaliacao"> 😐 Regular</label>
+                <label><input type="radio" name="avaliacao"> 👎 Ruim</label>
+            </div>
+
+            <div class="campo">
+                <label for="inComentarios">Comentários</label>
+                <textarea id="inComentarios" placeholder="Digite sua mensagem aqui"></textarea>
+            </div>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Recomendaria para amigos?</label>
+                <label><input type="checkbox"> Autoriza publicação do depoimento?</label>
+            </div>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+    </main>
+</body>
+
+</html>

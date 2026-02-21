@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* INICIO HEADER */
+.container__header {
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+
+}
+
+.header__logo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    color: #5A3E2B;
+}
+
+.header__nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav__item {
+    text-decoration: none;
+    color: #5A3E2B;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+/* FINAL HEADER */
+
+/* INICIO SOBRE MIM */
+
+.container__sobre {
+    background-color: #1C1C1C;
+    color: white;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+
+}
+
+.sobre__textos {
+    width: 60%;
+
+}
+
+.sobre__textos h1 {
+    font-size: 60px;
+    padding: 10px 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+
+}
+
+.sobre__textos p {
+    font-family: "Montserrat", sans-serif;
+    padding: 0px 40px;
+    font-size: 26px;
+}
+
+.sobre__img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sobre__img img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* FINAL SOBRE MIM */
+
+/* INICIO AMBIENTE */
+
+.ambiente__container {
+    background-color: #161616;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.ambiente__texto h2 {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.ambiente__imagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ambiente__imagens img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.produtos__container {
+    background-color: #1C1C1C;
+    color: white;
+}
+
+.produtos__texto h2 {
+    text-align: center;
+    padding: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+/* AMBIENTE FIMM */
+
+/* FAVORITOS INICIO */
+
+
+.container__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 9px;
+    padding: 60px;
+    background-color: #58585836;
+
+}
+
+.produtos_item {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px #1C1C1C;
+    border-radius: 9px;
+    margin: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.produtos_item img {
+    width: 100%;
+    height: 460px;
+    border-radius: 9px;
+    object-fit: cover;
+}
+
+.produtos_item h3 {
+    background-color: #1C1C1C;
+    text-align: center;
+    font-size: 36px;
+    padding: 0 14px;
+}
+
+.produtos_item p {
+    font-size: 17px;
+    width: 100%;
+    padding: 14px;
+}
+
+.produtos_item span {
+    font-size: 36px;
+    padding: 0 14px;
+    color: #e4a15a;
+}
+
+.produtos__botao button {
+    padding: 17px;
+    margin: 14px 27px;
+    border-radius: 9px;
+    background-color: #e4a15a;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.produtos__botao {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FAVORITOS FIM */
+
+/* TABELA INICIO */
+.produtos__texto h2 {
+    color: #fff;
+}
+
+.produtos__tabelas {
+    background-color: #1C1C1C;
+
+}
+
+.container__tabela {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabela__produtos {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #161616;
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* CABEÇALHO */
+
+.tabela__produtos thead {
+    background-color: #c68642;
+}
+
+.tabela__produtos th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabela__produtos td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #2f2f2f;
+}
+
+.container__tabela tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+/* TABELA FIM */
+
+footer {
+    background-color: #111111;
+    padding: 30px 90px;
+}
+
+.container__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container__endereco h2 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+}
+
+.container__horarios h2 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.container__horarios {
+    width: 30%;
+    margin: 0px 50px;
+}
+
+.tabela_horarios {
+    background-color: #1C1C1C;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #161616;
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.container__horarios thead {
+    background-color: #c68642;
+}
+
+.container__horarios th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.container__horarios td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #2f2f2f;
+}
+
+.container__horarios tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 500px) {
+    body {
+        background-color: #c68642;
+        width: 70vh;
+    }
+
+    .container__sobre {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sobre__textos {
+        width: 70vh;
+    }
+
+    .container__header {
+        width: 70vh;
+    }
+
+    .header__nav {
+        flex-direction: column;
+    }
+
+    .container__cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container__footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    address iframe {
+        width: 50vh;
+    }
+
+
+}
