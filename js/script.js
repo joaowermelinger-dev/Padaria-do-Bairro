@@ -88,5 +88,3 @@ function saudacao() {
     }
     
 }
-
-saudacao()
