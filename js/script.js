@@ -76,7 +76,7 @@ const listagemProdutos = [
 
 // Crie um funcao que sauda o cliente de acordo com o horario que ele entra no site
 
-function saudacao() {
+/*function saudacao() {
     const hora = new Date().getHours();
 
     if (hora <= 12) {
@@ -88,3 +88,4 @@ function saudacao() {
     }
     
 }
+*/
