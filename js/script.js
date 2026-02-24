@@ -72,11 +72,11 @@ const listagemProdutos = [
         estoque: 34,
         categoria: "Bebidas"
     }
-];
+];``
 
 // Crie um funcao que sauda o cliente de acordo com o horario que ele entra no site
 
-/*function saudacao() {
+function saudacao() {
     const hora = new Date().getHours();
 
     if (hora <= 12) {
@@ -88,4 +88,64 @@ const listagemProdutos = [
     }
     
 }
-*/
+
+saudacao()
+
+
+//👋 Uma função que exiba uma mensagem de boas-vindas
+
+
+
+//🛒 Uma função que calcule o subtotal de itens (receba preço e quantidade)
+
+function calcularSubTotal(valor, quantidade) {
+    // multiplicar o valor x quantidade
+    return valor * quantidade;
+}
+
+// colocar valor e quantidade
+let subTotal = calcularSubTotal(100, 3)
+// mostra no console o resultado
+console.log("Subtotal: R$ " + subTotal.toFixed(2));
+
+
+//🎁 Uma função que calcule desconto (receba valor e percentual de desconto)
+
+function calcularDesconto(valor, porcentagem) {
+    // logica para calcular porcentagem
+    const valorDesconto = valor * (porcentagem / 100);
+    const valorFinal  = valor - valorDesconto;
+
+    // retorna
+    return {
+        valorProduto: valor,
+        desconto: valorDesconto,
+        total: valorFinal
+    }
+}
+
+// Passar valor e porcentagem de desconto
+let resultado = calcularDesconto(300, 15);
+console.log("Valor produto: R$ " + resultado.valorProduto.toFixed(2))
+console.log("Desconto: R$ " + resultado.desconto.toFixed(2))
+console.log("Valor final: " + resultado.total.toFixed(2))
+
+//🚚 Uma função que calcule a taxa de entrega baseada na distância
+
+function calcularTaxaEntrega(distanciaKm) {
+    if(distanciaKm <= 5){
+        console.log("A sua entrega é gratuita")
+    }else if(distanciaKm <= 10) {
+        console.log("Sua entrega custa R$ 15,00")
+    }else {
+        console.log("Sua entrega custa R$ 25,00")
+    }
+}
+calcularTaxaEntrega(20)
+
+// funcao tradicional
+function calcularPreco(preco, produto) {
+    return preco * produto;
+}
+
+calcularPreco(10, 40)
