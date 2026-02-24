@@ -204,6 +204,22 @@ input[type="submit"]:hover {
     align-items: center;
 }
 
+.botao__card {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    padding: 16px;
+    margin: 10px 30px;
+    border-radius: 9px;
+    background-color: #c68642;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+
+.botao__card:hover {
+    background-color: #ffe0be;
+    color: #161616;
+}
 
 /* FAVORITOS FIM */
 
@@ -318,6 +334,32 @@ footer {
 .container__horarios tbody tr:hover {
     background-color: #2a2a2a;
 }
+
+.container__redes {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+}
+
+.container__redes a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: #c68642;
+    padding: 5px 30px;
+    border-radius: 9px;
+    font-size: 1.05rem;
+
+}
+
+.container__redes a:hover {
+    background-color: #ffe0be;
+    color: #161616;
+}
+
+
+
 
 
 /* Responsividade */
