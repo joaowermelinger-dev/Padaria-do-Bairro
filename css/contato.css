@@ -96,12 +96,25 @@ textarea:focus {
 
 /* BOTÃO */
 input[type="submit"] {
+    width: 100%;
     margin-top: 25px;
-    padding: 12px;
-    border-radius: 8px;
-    background: #00b4ff;
-    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #080808;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #303030;
+}
+
+.produtos__botao {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

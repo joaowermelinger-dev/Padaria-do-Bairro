@@ -180,15 +180,21 @@
     color: #e4a15a;
 }
 
-.produtos__botao button {
-    padding: 17px;
-    margin: 14px 27px;
-    border-radius: 9px;
-    background-color: #e4a15a;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    color: white;
+input[type="submit"] {
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #080808;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #303030;
 }
 
 .produtos__botao {
@@ -197,6 +203,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 
 /* FAVORITOS FIM */
 

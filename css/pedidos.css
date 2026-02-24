@@ -9,7 +9,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #090d16, #0b121a);
-    color: white;
+    color: #fff;
 }
 
 /* ===== MENU ===== */
@@ -111,13 +111,20 @@ input[type="submit"] {
     padding: 10px;
     border: none;
     border-radius: 6px;
-    background-color: #00d4ff;
-    color: black;
+    background-color: #080808;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #00aacc;
+    background-color: #303030;
+}
+
+.produtos__botao {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
