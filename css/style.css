@@ -11,10 +11,33 @@
     width: 100vw;
     background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 50px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     align-items: center;
+
+}
+
+.pesquisa h2 {
+    color: #5A3E2B;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.pesquisa input {
+    padding: 6px;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+.pesquisa ul {
+    background-color: #c68642;
+    color: white;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 9px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
 
 }
 

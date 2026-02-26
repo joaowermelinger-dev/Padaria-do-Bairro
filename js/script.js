@@ -47,7 +47,7 @@ QuantPao = 10
 
 // Crie um array de objetos
 
-const listagemProdutos = [
+const listagemProdutos1 = [
     {
         nome: "Café Espresso Tradicional",
         preco: "R$ " + 5.00,
@@ -72,7 +72,7 @@ const listagemProdutos = [
         estoque: 34,
         categoria: "Bebidas"
     }
-];``
+];
 
 // Crie um funcao que sauda o cliente de acordo com o horario que ele entra no site
 
@@ -149,3 +149,56 @@ function calcularPreco(preco, produto) {
 }
 
 calcularPreco(10, 40)
+
+
+
+const listagemProdutos = [
+    {
+        nome: "Café Espresso Tradicional",
+        preco: 5.00,
+        estoque: 5,
+        categoria: "Bebidas"
+    },
+    {
+        nome: "Bolo de Cenoura com Chocolate",
+        preco: 8.00,
+        estoque: 10,
+        categoria: "Doces & Acompanhamentos"
+    },
+    {
+        nome: "Croissant de Manteiga Artesanal",
+        preco: 7.50,
+        estoque: 43,
+        categoria: "Doces & Acompanhamentos"
+    },
+    {
+        nome: "Macchiato Cremoso",
+        preco: 6.50,
+        estoque: 34,
+        categoria: "Bebidas"
+    }
+];
+
+document.getElementById("campo-filtro").addEventListener("input", (e) => {
+
+    const valor = e.target.value.toLowerCase().trim();
+    const resultado = document.getElementById("resultado");
+
+    resultado.innerHTML = "";
+
+    // 👇 se estiver vazio, não mostra nada
+    if (valor === "") {
+        return;
+    }
+
+    listagemProdutos
+        .filter((produto) =>
+            produto.nome.toLowerCase().includes(valor)
+        )
+        .forEach((produto) => {
+            const li = document.createElement("li");
+            li.textContent = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
+            resultado.appendChild(li);
+        });
+
+});
