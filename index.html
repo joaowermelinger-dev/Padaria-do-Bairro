@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Padaria do Bairro</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
@@ -19,13 +20,8 @@
             <a class="nav__item" href="./pedidos.html">Pedidos</a>
         </nav>
 
-        <section class="pesquisa">
-            <h2>Pesquisar Produtos</h2>
-            <input type="text" id="campo-filtro" placeholder="Digite um produto">
-            <ul id="resultado">
 
-            </ul>
-        </section>
+        <button onclick="abrirCarrinho()" class="botao__carrinho" >Ver Carrinho</button>
         
 
     </header>
@@ -96,9 +92,9 @@
                         transformar qualquer momento em uma experiência aconchegante e cheia de sabor.</p>
                     <div class="produtos__botao">
                         <span>R$ 8,00</span>
-                        <button class="botao__card">Pedir agora</button>
+                        <button class="botao__card" onclick="adicionarProduto(1, 'Capuccino', 8.00)">Pedir agora</button>
                     </div>
-                </div>
+                </div> 
                 <div class="produtos_item">
                     <img src="./images/produtos/ChocolateQuenteGourmet.png" alt="ChocolateQuenteGourmet">
                     <h3>Choco Quente Gourmet</h3>
@@ -108,7 +104,7 @@
                         busca uma experiência sofisticada e cheia de conforto em cada gole.</p>
                     <div class="produtos__botao">
                         <span>R$ 12,00</span>
-                        <button class="botao__card">Pedir agora</button>
+                        <button class="botao__card" onclick="adicionarProduto(2, 'Choco Quente Gourmet', 12.00)">Pedir agora</button>
                     </div>
                 </div>
                 <div class="produtos_item">
@@ -120,7 +116,7 @@
                         elegante a cada gole.</p>
                     <div class="produtos__botao">
                         <span>R$ 10,00</span>
-                        <button class="botao__card">Pedir agora</button>
+                        <button class="botao__card" onclick="adicionarProduto(3, 'Latte Baunilha Gourmet', 10.00)">Pedir agora</button>
                     </div>
                 </div>
             </div>
@@ -131,8 +127,13 @@
             <div class="produtos__texto">
                 <h2>Conheça mais alguns produtos</h2>
             </div>
+            <div class="pesquisa__produtos">
+            <i id="icon_busca" class="fa-solid fa-magnifying-glass"></i>
+            <input id="campoBusca" type="text" placeholder="Pesquise por produtos em nossa Padaria">
+
+            </div>
             <div class="container__tabela">
-                <table class="tabela__produtos">
+                <table class="tabela__produtos" id="tabelaProdutos">
                     <thead>
                         <tr>
                             <th>Categoria</th>
@@ -151,6 +152,9 @@
                             <td>Massa leve e folhada, dourada por fora e macia por dentro, feita com manteiga de
                                 qualidade.</td>
                             <td>R$ 7,50</td>
+                                <td>
+                                 <button class="btn-adicionar">Adicionar</button>
+                                </td>
                         </tr>
                         <!-- PRIMEIRA LINHA -->
                         <tr>
@@ -158,6 +162,9 @@
                             <td>Croissant de Chocolate Belga</td>
                             <td>Croissant crocante recheado com chocolate belga derretido e irresistível.</td>
                             <td>R$ 9,50</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- SEGUNDA LINHA -->
                         <tr>
@@ -165,6 +172,9 @@
                             <td>Pão de Queijo Mineiro Tradicional</td>
                             <td>Crocante por fora e macio por dentro, preparado com queijo selecionado.</td>
                             <td>R$ 6,00</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- TERCEIRA LINHA -->
                         <tr>
@@ -172,6 +182,9 @@
                             <td>Bolo de Cenoura com Chocolate</td>
                             <td>Bolo macio de cenoura coberto com uma camada generosa de chocolate.</td>
                             <td>R$ 8,00</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- QUARTA LINHA -->
                         <tr>
@@ -179,6 +192,9 @@
                             <td>Bolo de Chocolate Caseiro Premium</td>
                             <td>Bolo úmido e intenso, feito com chocolate selecionado e sabor marcante.</td>
                             <td>R$ 9,00</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- BEBIDAS QUINTA LINHA -->
                         <tr>
@@ -187,6 +203,9 @@
                             <td>Café encorpado e aromático, preparado na medida certa para realçar o sabor dos grãos
                                 selecionados.</td>
                             <td>R$ 5,00</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- BEBIDAS SEXTA LINHA -->
                         <tr>
@@ -194,6 +213,9 @@
                             <td>Café Espresso Duplo</td>
                             <td>Dose dupla de café intenso, ideal para quem aprecia sabor forte e energia extra.</td>
                             <td>R$ 7,00</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- BEBIDAS SETIMA LINHA -->
                         <tr>
@@ -201,6 +223,9 @@
                             <td>Mocha Chocolate Especial</td>
                             <td>Combinação equilibrada de café espresso, chocolate cremoso e leite vaporizado.</td>
                             <td>R$ 11,00</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- BEBIDAS OITAVA LINHA -->
                         <tr>
@@ -209,6 +234,9 @@
                             <td>Café quente e aromático com um toque suave de canela, perfeito para aquecer o paladar.
                             </td>
                             <td>R$ 8,00</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
                         <!-- BEBIDAS NONA LINHA -->
                         <tr>
@@ -216,16 +244,15 @@
                             <td>Macchiato Cremoso</td>
                             <td>Café espresso com uma delicada camada de leite vaporizado, leve e sofisticado.</td>
                             <td>R$ 6,50</td>
+                            <td>
+                            <button class="btn-adicionar">Adicionar</button>
+                            </td>
                         </tr>
-
-
-
-
                     </tbody>
-
                 </table>
             </div>
         </section>
+        
     </main>
     <!-- Finalização -->
     <footer>
@@ -278,6 +305,22 @@
 
 
     </footer>
+
+    <div id="carrinho-lateral" class="carrinho-lateral">
+
+  <div class="carrinho-header">
+    <h2>🛒 Meu Carrinho</h2>
+    <button onclick="fecharCarrinho()">X</button>
+  </div>
+
+  <div id="lista-carrinho"></div>
+
+  <div class="carrinho-footer">
+    <p>Total: R$ <span id="total">0.00</span></p>
+    <button onclick="limparCarrinho()">Limpar</button>
+  </div>
+
+</div>
 
     <script src="./js/script.js"></script>
 </body>
